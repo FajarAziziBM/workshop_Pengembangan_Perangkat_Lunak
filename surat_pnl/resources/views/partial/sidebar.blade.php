@@ -45,7 +45,7 @@
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="fa-sharp fa-solid fa-user-group"></i>
                     </div>
-                    <span class="nav-link-text ms-1">Data User</span>
+                    <span class="nav-link-text ms-1">Users</span>
                 </a>
             </li>
 
@@ -70,11 +70,11 @@
             <li class="nav-item">
                 <form action="/logout" method="post">
                     @csrf
-                <button class="nav-link text-white w-75 bg-transparent border-0" type="submit"><i class="fa-solid fa-right-from-bracket me-2 fs-6"></i>
-                    Logout</button>
+                    <button class="nav-link text-white w-75 bg-transparent border-0" type="submit"><i
+                            class="fa-solid fa-right-from-bracket me-2 fs-6"></i>
+                        Logout</button>
                 </form>
             </li>
         </ul>
     </div>
 </aside>
-
