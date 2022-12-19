@@ -5,9 +5,9 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
             <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li>
-            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Surat Masuk</li>
+            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Surat Keluar</li>
         </ol>
-        <h2 class="font-weight-bolder mt-3 mb-3">Surat Masuk</h2>
+        <h2 class="font-weight-bolder mt-3 mb-3">Surat Keluar</h2>
     </nav>
     <button class="btn btn-dark fs-6 fw-normal" onclick="location.href='#'"><i class="fa-solid fa-square-plus fs-6 me-2 "></i>Tambah</button>
     <div class="card p-4">

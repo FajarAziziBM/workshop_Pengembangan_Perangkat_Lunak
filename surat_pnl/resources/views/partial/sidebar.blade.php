@@ -30,6 +30,14 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a class="nav-link text-white {{ Request::is('letters/surat-keluar') ? 'active bg-gradient-primary' : '' }} " href="{{ route('letters.surat-keluar') }}">
+                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="fa-solid fa-envelope opacity-10 ms-1"></i>
+                    </div>
+                    <span class="nav-link-text ms-1">Surat Keluar</span>
+                </a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link text-white {{ Request::is('letters/approve') ? 'active bg-gradient-primary' : '' }} " href="{{ route('letters.approve') }}">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="fa-solid fa-bars-progress opacity-10 ms-1"></i>
@@ -65,7 +73,7 @@
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="fa-solid fa-bars-progress opacity-10 ms-1"></i>
                     </div>
-                    <span class="nav-link-text ms-1">Jurusan</span>
+                    <span class="nav-link-text ms-1">Data Jurusan</span>
                 </a>
             </li>
 
@@ -74,7 +82,7 @@
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="fa-solid fa-bars-progress opacity-10 ms-1"></i>
                     </div>
-                    <span class="nav-link-text ms-1">Prodi</span>
+                    <span class="nav-link-text ms-1">Data Prodi</span>
                 </a>
             </li>
 

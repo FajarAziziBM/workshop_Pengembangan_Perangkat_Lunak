@@ -6,6 +6,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SuratKeluarController;
 use App\Http\Controllers\SuratMasukController;
 use App\Http\Controllers\UserController;
 
@@ -55,6 +56,7 @@ Route::prefix('/account')->group(function () {
 
 Route::prefix('/letters')->group(function () {
     Route::get('/surat-masuk', [SuratMasukController::class, 'index'])->name('letters.surat-masuk')->middleware('auth');
+    Route::get('/surat-keluar', [SuratKeluarController::class, 'index'])->name('letters.surat-keluar')->middleware('auth');
     Route::get('/approve', [ApproveController::class, 'index'])->name('letters.approve')->middleware('auth');
     Route::get('/history', [HistoryController::class, 'index'])->name('letters.history')->middleware('auth');
 });

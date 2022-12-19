@@ -5,10 +5,12 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
             <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li>
-            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Data User</li>
+            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Account</li>
         </ol>
         <h2 class="font-weight-bolder mt-3 mb-3">Data User</h2>
     </nav>
+
+    <br>
 
     <button class="btn btn-dark fs-6 fw-normal" data-bs-toggle="modal" data-bs-target="#tambahUser"><i class="fa-solid fa-square-plus fs-4 me-2"></i>Tambah</button>
 
@@ -87,6 +89,6 @@
     <!-- Akhir Modal Tambah User -->
 
 </div>
-</div>
-</div>
+
+@include('partial.footer')
 @endsection
