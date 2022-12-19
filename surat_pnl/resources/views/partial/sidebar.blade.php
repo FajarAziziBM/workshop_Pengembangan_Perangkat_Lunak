@@ -10,7 +10,7 @@
     <div class="collapse navbar-collapse  w-auto  max-height-vh-100" id="sidenav-collapse-main">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link text-white {{ Request::is('/') ? 'active bg-gradient-primary' : '' }} " href="/dashboard/home">
+                <a class="nav-link text-white {{ Request::is('dashboard/home') ? 'active bg-gradient-primary' : '' }} " href="/dashboard/home">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="material-icons opacity-10">dashboard</i>
                     </div>
@@ -19,11 +19,40 @@
             </li>
 
             <li class="nav-item mt-3">
+                <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Surat pages</h6>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white {{ Request::is('letters/surat-masuk') ? 'active bg-gradient-primary' : '' }} " href="{{ route('letters.surat-masuk') }}">
+                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="fa-solid fa-envelope opacity-10 ms-1"></i>
+                    </div>
+                    <span class="nav-link-text ms-1">Surat Masuk</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white {{ Request::is('letters/approve') ? 'active bg-gradient-primary' : '' }} " href="{{ route('letters.approve') }}">
+                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="fa-solid fa-bars-progress opacity-10 ms-1"></i>
+                    </div>
+                    <span class="nav-link-text ms-1">Approve</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white {{ Request::is('letters/history') ? 'active bg-gradient-primary' : '' }} " href="{{ route('letters.history') }}">
+                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="fa-solid fa-bars-progress opacity-10 ms-1"></i>
+                    </div>
+                    <span class="nav-link-text ms-1">History Surat</span>
+                </a>
+            </li>
+
+
+            <li class="nav-item mt-3">
                 <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Master Data</h6>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link text-white {{ Request::is('pengguna*') ? 'active bg-gradient-primary' : '' }} " href="/master-data/dosen">
+                <a class="nav-link text-white {{ Request::is('master-data/dosen') ? 'active bg-gradient-primary' : '' }} " href="/master-data/dosen">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="fa-solid fa-bars-progress opacity-10 ms-1"></i>
                     </div>
@@ -32,7 +61,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link text-white {{ Request::is('pengguna*') ? 'active bg-gradient-primary' : '' }} " href="/master-data/jurusan">
+                <a class="nav-link text-white {{ Request::is('master-data/jurusan') ? 'active bg-gradient-primary' : '' }} " href="/master-data/jurusan">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="fa-solid fa-bars-progress opacity-10 ms-1"></i>
                     </div>
@@ -41,7 +70,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link text-white {{ Request::is('pengguna*') ? 'active bg-gradient-primary' : '' }} " href="/master-data/prodi">
+                <a class="nav-link text-white {{ Request::is('master-data/prodi') ? 'active bg-gradient-primary' : '' }} " href="/master-data/prodi">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="fa-solid fa-bars-progress opacity-10 ms-1"></i>
                     </div>
@@ -49,45 +78,26 @@
                 </a>
             </li>
 
-            <li class="nav-item">
-                <a class="nav-link text-white {{ Request::is('surat*', 'form-surat*') ? 'active bg-gradient-primary' : '' }} " href="/surat">
-                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="fa-solid fa-envelope opacity-10 ms-1"></i>
-                    </div>
-                    <span class="nav-link-text ms-1">Surat</span>
-                </a>
+
+            <li class="nav-item mt-3">
+                <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Account Data</h6>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white {{ Request::is('aprove*') ? 'active bg-gradient-primary' : '' }} " href="/aprove">
-                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="fa-solid fa-bars-progress opacity-10 ms-1"></i>
-                    </div>
-                    <span class="nav-link-text ms-1">Aprove</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white {{ Request::is('user*') ? 'active bg-gradient-primary' : '' }} " href="/user">
+                <a class="nav-link text-white {{ Request::is('account/users') ? 'active bg-gradient-primary' : '' }} " href="{{ route('account.users') }}">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="fa-sharp fa-solid fa-user-group"></i>
                     </div>
                     <span class="nav-link-text ms-1">Users</span>
                 </a>
             </li>
-
-            <li class="nav-item mt-3">
-                <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Account pages</h6>
-            </li>
             <li class="nav-item">
-                <a class="nav-link text-white {{ Request::is('akun*') ? 'active bg-gradient-primary' : '' }} " href="/akun">
+                <a class="nav-link text-white {{ Request::is('account/profile') ? 'active bg-gradient-primary' : '' }} " href="{{ route('account.profile') }}">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="fa-solid fa-user opacity-10 ms-1"></i>
+                        <i class="fa-sharp fa-solid fa-user-group"></i>
                     </div>
-                    <span class="nav-link-text ms-1">Akun</span>
+                    <span class="nav-link-text ms-1">Profile</span>
                 </a>
             </li>
-
-
-
 
         </ul>
     </div>

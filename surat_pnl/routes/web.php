@@ -1,8 +1,13 @@
 <?php
 
+use App\Http\Controllers\ApproveController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\HistoryController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SuratMasukController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,24 +48,13 @@ Route::prefix('/master-data')->group(function () {
     });
 });
 
-
-
-Route::get('/surat', function () {
-    return view('dashboard.surat');
+Route::prefix('/account')->group(function () {
+    Route::get('/users', [UserController::class, 'index'])->name('account.users')->middleware('auth');
+    Route::get('/profile', [ProfileController::class, 'index'])->name('account.profile')->middleware('auth');
 });
 
-Route::get('/form-surat', function () {
-    return view('dashboard.form_surat');
-});
-
-Route::get('/akun', function () {
-    return view('dashboard.akun');
-});
-
-Route::get('/aprove', function () {
-    return view('dashboard.aprove');
-});
-
-Route::get('/user', function () {
-    return view('dashboard.user');
+Route::prefix('/letters')->group(function () {
+    Route::get('/surat-masuk', [SuratMasukController::class, 'index'])->name('letters.surat-masuk')->middleware('auth');
+    Route::get('/approve', [ApproveController::class, 'index'])->name('letters.approve')->middleware('auth');
+    Route::get('/history', [HistoryController::class, 'index'])->name('letters.history')->middleware('auth');
 });
