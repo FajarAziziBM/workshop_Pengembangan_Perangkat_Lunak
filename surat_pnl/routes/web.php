@@ -21,38 +21,46 @@ Route::controller(LoginController::class)->group(function () {
     Route::post('/logout', 'logout');
 });
 
-Route::get('/', [DashboardController::class, 'index'])->name('dashboard.home')->middleware('auth');
+Route::prefix('/dashboard')->group(function () {
+    route::get('/home', [DashboardController::class, 'index'])->name('dashboard.home')->middleware('auth');
+});
 
-// Route::prefix('/dashboard')->group(function () {
-//     Route::get('/home', [DashboardController::class, 'index'])->name('dashboard.home');
-// });
+Route::prefix('/master-data')->group(function () {
+    Route::get('/dosen', function () {
+        return view('master.dosen');
+    });
+    Route::get('/mahasiswa', function () {
+        return view('master.mahasiswa');
+    });
+    Route::get('/approvesior', function () {
+        return view('master.approvesior');
+    });
+    Route::get('/jurusan', function () {
+        return view('master.jurusan');
+    });
+    Route::get('/prodi', function () {
+        return view('master.prodi');
+    });
+});
 
 
 
-// Route::get('/', function () {
-//     return view('home');
-// });
+Route::get('/surat', function () {
+    return view('dashboard.surat');
+});
 
-// Route::get('/surat', function () {
-//     return view('surat');
-// });
+Route::get('/form-surat', function () {
+    return view('dashboard.form_surat');
+});
 
-// Route::get('/form-surat', function () {
-//     return view('form_surat');
-// });
+Route::get('/akun', function () {
+    return view('dashboard.akun');
+});
 
-// Route::get('/akun', function () {
-//     return view('akun');
-// });
+Route::get('/aprove', function () {
+    return view('dashboard.aprove');
+});
 
-// Route::get('/aprove', function () {
-//     return view('aprove');
-// });
-
-// // Route::get('/login', function () {
-// //     return view('auth.layout.login');
-// // });
-
-// Route::get('/user', function () {
-//     return view('user');
-// });
+Route::get('/user', function () {
+    return view('dashboard.user');
+});
