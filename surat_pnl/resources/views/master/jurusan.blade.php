@@ -12,7 +12,7 @@
 
     <br>
 
-    <button class="btn btn-dark fs-6 fw-normal" onclick="location.href='#'"><i class="fa-solid fa-square-plus fs-6 me-2 "></i>Tambah</button>
+    <button class="btn btn-dark fs-6 fw-normal" data-bs-toggle="modal" data-bs-target="#tbhjrs" onclick="location.href='#'"><i class="fa-solid fa-square-plus fs-6 me-2 "></i>Tambah</button>
 
     <div class="card p-4">
 
@@ -28,60 +28,18 @@
             </thead>
 
             <tbody>
+                @foreach ( $jurusans as $jurusan )
                 <tr>
-                    <td>1</td>
-                    <td>Teknologi Informasi Dan Komputer</td>
-                    <td>TIK</td>
+                    <td>{{ $loop->iteration }}</td>
+                    <td>{{ $jurusan->nama_jurusan }}</td>
+                    <td>{{ $jurusan->kode_jurusan }}</td>
                     <td>
                         <button class="btn btn-warning mt-3"><i class="fa-solid fa-pen-to-square "></i></button>
                         <button class="btn btn-danger mt-3" data-bs-toggle="modal" data-bs-target="#hapus"><i class="fa-solid fa-trash "></i></button>
                     </td>
                 </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Teknik Elektro</td>
-                    <td>TE</td>
-                    <td>
-                        <button class="btn btn-warning mt-3"><i class="fa-solid fa-pen-to-square "></i></button>
-                        <button class="btn btn-danger mt-3" data-bs-toggle="modal" data-bs-target="#hapus"><i class="fa-solid fa-trash "></i></button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Teknik Sipil</td>
-                    <td>TS</td>
-                    <td>
-                        <button class="btn btn-warning mt-3"><i class="fa-solid fa-pen-to-square "></i></button>
-                        <button class="btn btn-danger mt-3" data-bs-toggle="modal" data-bs-target="#hapus"><i class="fa-solid fa-trash "></i></button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Teknik Kimia</td>
-                    <td>TK</td>
-                    <td>
-                        <button class="btn btn-warning mt-3"><i class="fa-solid fa-pen-to-square "></i></button>
-                        <button class="btn btn-danger mt-3" data-bs-toggle="modal" data-bs-target="#hapus"><i class="fa-solid fa-trash "></i></button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>Teknik Mesin</td>
-                    <td>TM</td>
-                    <td>
-                        <button class="btn btn-warning mt-3"><i class="fa-solid fa-pen-to-square "></i></button>
-                        <button class="btn btn-danger mt-3" data-bs-toggle="modal" data-bs-target="#hapus"><i class="fa-solid fa-trash "></i></button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>Tata Niaga</td>
-                    <td>TN</td>
-                    <td>
-                        <button class="btn btn-warning mt-3"><i class="fa-solid fa-pen-to-square "></i></button>
-                        <button class="btn btn-danger mt-3" data-bs-toggle="modal" data-bs-target="#hapus"><i class="fa-solid fa-trash "></i></button>
-                    </td>
-                </tr>
+                @endforeach
+
             </tbody>
         </table>
         {{-- / Tabel Jurusan --}}

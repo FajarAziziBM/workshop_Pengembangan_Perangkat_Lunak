@@ -3,6 +3,9 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\Jurusan;
+use App\Models\Prodi;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
@@ -28,5 +31,9 @@ class DatabaseSeeder extends Seeder
             'password' => Hash::make(123123123),
             'role' => '1',
         ]);
+
+        User::factory(10)->create();
+        Jurusan::factory(10)->create();
+        Prodi::factory(10)->create();
     }
 }

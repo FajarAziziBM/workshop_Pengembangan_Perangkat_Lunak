@@ -60,7 +60,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link text-white {{ Request::is('master-data/dosen') || Request::is('master-data/mahasiswa') || Request::is('master-data/approvesior') ? 'active bg-gradient-primary' : '' }} " href="/master-data/dosen">
+                <a class="nav-link text-white {{ Request::is('master-data/mahasiswa') || Request::is('master-data/approvesior') ? 'active bg-gradient-primary' : '' }} " href="{{ route('master-data.mahasiswa')}}">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="fa-solid fa-bars-progress opacity-10 ms-1"></i>
                     </div>

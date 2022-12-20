@@ -1,19 +1,19 @@
 <?php
 
-use App\Http\Controllers\ApproveController;
-use App\Http\Controllers\ApprovesiorController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\DosenController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProdiController;
+use App\Http\Controllers\ApproveController;
 use App\Http\Controllers\JurusanController;
 use App\Http\Controllers\LaporanController;
-use App\Http\Controllers\MahasiswaController;
-use App\Http\Controllers\ProdiController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\SuratKeluarController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\SuratMasukController;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\ApprovesiorController;
+use App\Http\Controllers\SuratKeluarController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,7 +37,7 @@ Route::prefix('/dashboard')->group(function () {
 });
 
 Route::prefix('/master-data')->group(function () {
-    Route::get('/dosen', [DosenController::class, 'index'])->name('master-data.dosen')->middleware('auth');
+    // Route::get('/dosen', [DosenController::class, 'index'])->name('master-data.dosen')->middleware('auth');
     Route::get('/mahasiswa', [MahasiswaController::class, 'index'])->name('master-data.mahasiswa')->middleware('auth');
     Route::get('/approvesior', [ApprovesiorController::class, 'index'])->name('master-data.approvesior')->middleware('auth');
     Route::get('/jurusan', [JurusanController::class, 'index'])->name('master-data.jurusan')->middleware('auth');

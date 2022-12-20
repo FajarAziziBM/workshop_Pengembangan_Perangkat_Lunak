@@ -19,24 +19,28 @@
         <table id="myTable" class="table responsive nowrap table-bordered table-striped align-middle" style="width:100%">
             <thead>
                 <tr>
-                    <th>No</th>
-                    <th>Nama</th>
-                    <th>Username</th>
-                    <th>Role</th>
-                    <th>Action</th>
+                    <th>NO</th>
+                    <th>USERNAME</th>
+                    <th>EMAIL</th>
+                    <th>ROLE</th>
+                    <th>ACTION</th>
                 </tr>
             </thead>
             <tbody>
+
+                @foreach ( $users as $user )
                 <tr>
-                    <td>1</td>
-                    <td>Putri</td>
-                    <td>putri123</td>
-                    <td>Admin</td>
+                    <td>{{ $loop-> iteration }}</td>
+                    <td>{{ $user-> username }}</td>
+                    <td>{{ $user-> email }}</td>
+                    <td>{{ $user-> role }}</td>
                     <td class="">
                         <button class="btn btn-warning mt-3" data-bs-toggle="modal" data-bs-target="#editUser"><i class="fa-solid fa-pen-to-square "></i></button>
                         <button class="btn btn-danger mt-3" data-bs-toggle="modal" data-bs-target="#hapusUser"><i class="fa-solid fa-trash "></i></button>
                     </td>
                 </tr>
+                @endforeach
+
             </tbody>
         </table>
         {{-- / Tabel User --}}

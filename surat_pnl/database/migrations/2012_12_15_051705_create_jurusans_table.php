@@ -15,7 +15,8 @@ return new class extends Migration
     {
         Schema::create('jurusans', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_jurusan')->length(100);
+            $table->string('nama_jurusan')->length(50);
+            $table->string('kode_jurusan')->length(5);
             $table->timestamps();
         });
     }

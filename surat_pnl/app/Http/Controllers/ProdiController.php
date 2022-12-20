@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Prodi;
 use Illuminate\Http\Request;
 
 class ProdiController extends Controller
@@ -9,6 +10,8 @@ class ProdiController extends Controller
     //
     function index()
     {
-        return view('master.prodi');
+        $prodis = Prodi::all();
+        // dd($prodis);
+        return view('master.prodi')->with(compact('prodis'));
     }
 }
