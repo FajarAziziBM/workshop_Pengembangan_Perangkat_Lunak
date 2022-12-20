@@ -46,11 +46,11 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white {{ Request::is('letters/history') ? 'active bg-gradient-primary' : '' }} " href="{{ route('letters.history') }}">
+                <a class="nav-link text-white {{ Request::is('letters/laporan') ? 'active bg-gradient-primary' : '' }} " href="{{ route('letters.laporan') }}">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="fa-solid fa-bars-progress opacity-10 ms-1"></i>
                     </div>
-                    <span class="nav-link-text ms-1">History Surat</span>
+                    <span class="nav-link-text ms-1">Laporan</span>
                 </a>
             </li>
 
@@ -60,7 +60,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link text-white {{ Request::is('master-data/dosen') ? 'active bg-gradient-primary' : '' }} " href="/master-data/dosen">
+                <a class="nav-link text-white {{ Request::is('master-data/dosen') || Request::is('master-data/mahasiswa') || Request::is('master-data/approvesior') ? 'active bg-gradient-primary' : '' }} " href="/master-data/dosen">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="fa-solid fa-bars-progress opacity-10 ms-1"></i>
                     </div>

@@ -15,7 +15,7 @@
                                 @csrf
                                 <label class="text-info">Username</label>
                                 <div class="mb-3">
-                                    <input type="username" class="form-control bg-transparent" name="username" id="username" placeholder="Username" aria-label="username" style="color: white">
+                                    <input type="username" class="form-control bg-transparent" name="username" id="username" placeholder="NIP / NIM" aria-label="username" style="color: white">
                                     @error('username')
                                     <p class="text-danger text-xs mt-2">{{ $message }}</p>
                                     @enderror

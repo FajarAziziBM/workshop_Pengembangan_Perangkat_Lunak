@@ -40,7 +40,7 @@
               <i class="material-icons opacity-10">weekend</i>
             </div>
             <div class="text-end pt-1">
-              <p class="text-sm mb-0 text-capitalize">Surat Keterangan Cuti</p>
+              <p class="text-sm mb-0 text-capitalize">Surat Ket. Cuti</p>
               <h4 class="mb-0">2</h4>
             </div>
           </div>
@@ -58,7 +58,7 @@
               <i class="material-icons opacity-10">weekend</i>
             </div>
             <div class="text-end pt-1">
-              <p class="text-sm mb-0 text-capitalize">Surat Keterangan Kuliah</p>
+              <p class="text-sm mb-0 text-capitalize">Surat Ket. Kuliah</p>
               <h4 class="mb-0">3</h4>
             </div>
           </div>
@@ -76,7 +76,7 @@
               <i class="material-icons opacity-10">weekend</i>
             </div>
             <div class="text-end pt-1">
-              <p class="text-sm mb-0 text-capitalize">Surat Keterangan Mengulang</p>
+              <p class="text-sm mb-0 text-capitalize"> Surat Ket. Mengulang</p>
               <h4 class="mb-0">0</h4>
             </div>
           </div>

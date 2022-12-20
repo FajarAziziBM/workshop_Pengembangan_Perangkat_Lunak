@@ -4,11 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ApprovesiorController extends Controller
+class DosenController extends Controller
 {
     //
     function index()
     {
-        return view('master.approvesior');
+        return view('master.dosen');
     }
 }

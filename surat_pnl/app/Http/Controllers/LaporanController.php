@@ -4,11 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class HistoryController extends Controller
+class LaporanController extends Controller
 {
     //
     function index()
     {
-        return view('letters.history');
+        return view('letters.laporan');
     }
 }

@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('prodis', function (Blueprint $table) {
             $table->id();
             $table->foreignId('id_jurusan')->constrained('jurusans')->onUpdate('cascade')->onDelete('restrict');
+            $table->string('kode_prodi')->unique()->length(5);
             $table->string('nama_prodi')->length(100);
             $table->timestamps();
         });

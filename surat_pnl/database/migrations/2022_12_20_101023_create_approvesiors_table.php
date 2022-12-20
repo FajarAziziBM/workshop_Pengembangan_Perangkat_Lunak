@@ -13,11 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('dosens', function (Blueprint $table) {
+        Schema::create('approvesiors', function (Blueprint $table) {
             $table->id();
             $table->foreignId('id_user')->constrained('users')->onUpdate('cascade')->onDelete('restrict');
             $table->string('nama')->length(50);
             $table->string('NIP')->length(18);
+            $table->string('jabatan');
             $table->foreignId('id_prodi')->constrained('prodis')->onUpdate('cascade')->onDelete('restrict');
             $table->string('alamat')->length(100);
             $table->string('no_hp')->length(13);
@@ -32,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('dosens');
+        Schema::dropIfExists('approvesiors');
     }
 };

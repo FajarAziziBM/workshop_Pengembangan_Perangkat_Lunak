@@ -6,9 +6,8 @@
                     © <script>
                         document.write(new Date().getFullYear())
                     </script>,
-                    made with <i class="fa fa-heart"></i> by
+                    made with by
                     <a href="#" class="font-weight-bold" target="_blank">Creative Tim</a>
-                    for a better web.
                 </div>
             </div>
             <!-- <div class="col-lg-3">
@@ -18,7 +17,7 @@
                     </li>
                 </ul>
             </div> -->
-            <div class="col-lg-3">
+            <!-- <div class="col-lg-3">
                 <ul class="nav nav-footer justify-content-center justify-content-lg-end">
                     <li class="nav-item">
                         <a href="#" class="nav-link text-muted" target="_blank">Creative Tim</a>
@@ -33,7 +32,7 @@
                         <a href="#" class="nav-link pe-0 text-muted" target="_blank">License</a>
                     </li>
                 </ul>
-            </div>
+            </div> -->
         </div>
     </div>
 </footer>

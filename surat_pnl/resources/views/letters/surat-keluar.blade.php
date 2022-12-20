@@ -21,7 +21,6 @@
                     <th>JENIS SURAT</th>
                     <th>TGL PERMOHONAN</th>
                     <th>FORM PERMOHONAN</th>
-                    <th>STATUS SURAT</th>
                     <th>TGL SELESAI</th>
                     <th>ACTION</th>
                 </tr>
@@ -33,7 +32,6 @@
                     <td>Surat Keterangan Aktif</td>
                     <td>23/10/2022</td>
                     <td>putri.pdf</td>
-                    <td>Pending</td>
                     <td></td>
                     <td class="">
                         <button class="btn btn-success mt-3"><i class="fa-solid fa-envelope-open-text "></i></button>
